@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 500px;
+  background-color: #2a2a2a; /* Dark background */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar {
+  height: 5px;
+  width: 0;
+  background: linear-gradient(90deg, #5865F2, #8E44AD); /* Gradient progress bar */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: width 0.3s ease;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #5865F2, #8E44AD);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #33364d;
+  border: 1px solid #5865F2;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaaaaa;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #5865F2;
+  color: #ffffff;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.6s;
+}
+
+button:hover {
+  background-color: #8E44AD;
+}
+
+.next-btn, .prev-btn {
+  display: inline-block;
+  width: 48%;
+}
+
+.next-btn {
+  float: right;
+}
+
+.prev-btn {
+  float: left;
+  background-color: #474747;
+}
+
+.prev-btn:hover {
+  background-color: #0f0f0f;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+.plan-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;  /* Space below the title */
+}

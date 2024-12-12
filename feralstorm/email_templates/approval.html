@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approval Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header h1 {
+            color: #333333;
+        }
+        .content {
+            margin: 20px 0;
+            color: #555555;
+            line-height: 1.5;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #aaaaaa;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>Welcome to FeralChat!</h1>
+        </div>
+        <div class="content">
+            <p>Congratulations! Your application has been approved. Please use the link below to complete your registration and set up your account.</p>
+            <p>Your verification code is: <strong>{{verification_code}}</strong></p>
+            <a href="{{payment_link}}" class="btn">Complete Registration</a>
+        </div>
+        <div class="footer">
+            <p>If you have any questions, feel free to contact us at support@feralstorm.com.</p>
+            <p>Thank you for choosing FeralChat!</p>
+        </div>
+    </div>
+</body>
+</html>
